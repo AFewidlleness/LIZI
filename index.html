@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<style type="text/css">
+			.iphone {
+				width: 250px;
+				height: 450px;
+				margin: 30px auto;
+				background-color: #2e2e2d;
+				border-radius: 38px;
+				border: 10px solid #3A3A39;
+				position: relative;
+			}
+			
+			.iphone::before {
+				content: '';
+				position: absolute;
+				top: -18px;
+				right: 48px;
+				width: 50px;
+				height: 8px;
+				display: inline-block;
+				background: #2D2D2C;
+				border-radius: 5px 5px 0 0;
+			}
+			
+			.iphone::after {
+				content: '';
+				position: absolute;
+				top: 55px;
+				left: -18px;
+				width: 8px;
+				height: 55px;
+				display: inline-block;
+				background: #2D2D2C;
+				border-radius: 5px 0 0 5px;
+			}
+			
+			.sxt {
+				width: 8px;
+				height: 8px;
+				border: 4px solid #484847;
+				border-radius: 50%;
+				position: absolute;
+				top: 20px;
+				right: 48%;
+				background: #000;
+				box-shadow: 1px 1px 5px #000;
+			}
+			
+			.tt {
+				width: 66px;
+				height: 6px;
+				border-radius: 5px;
+				border: 3px solid #484847;
+				position: absolute;
+				top: 48px;
+				left: 35%;
+				background: #000;
+				box-shadow: 1px 1px 5px #000;
+			}
+			
+			.pm {
+				width: 220px;
+				height: 316px;
+				line-height: 290px;
+				position: absolute;
+				top:38px;
+				left: 15px;
+				background-color: #000000;
+				transition: all .8s ease;
+				text-align: center;
+				position: relative;
+				font-size: 36px;
+				font-weight: 600;
+				font-family: "新宋体";
+			}
+			.pm img{
+				width: 100%;
+				height: 100%;
+			}
+			.home {
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				background: #191918;
+				box-shadow: 2px 2px 5px #000 inset;
+				position: absolute;
+				bottom: 7px;
+				left: 42%;
+				cursor: pointer;
+			}
+			
+			.home::before {
+				content: '';
+				width: 24px;
+				height: 24px;
+				margin: 8px 0 0 8px;
+				border-radius: 8px;
+				display: inline-block;
+				border: 3px solid #fff;
+				transition: all .8s;
+			}
+			
+			.home:hover::before {
+				content: '';
+				border: 3px solid cornflowerblue;
+			}
+			
+			.pmOpen {
+				background: url(img/dhy.png) no-repeat;
+				color: cornflowerblue;
+			}
+		</style>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".home").hover(
+					function() {
+						$(".pm").addClass("pmOpen")
+					},
+					function() {
+						$(".pm").removeClass("pmOpen")
+					}
+				)
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="iphone">
+			<div class="sxt"></div>
+			<div class="tt"></div>
+			<div class="pm">
+				<p class="animated bounceIn infinite">hello!DHY</p></div>
+			<div class="home"></div>
+		</div>
+
+	</body>
+
+</html>
